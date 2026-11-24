@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Genius Hormo — Consulta</title>
+<style>
+:root{--red:#ef1d2b;--bg:#070707;--panel:#111;--white:#f7f7f7;--muted:#bdbdbd}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(ellipse at 50% 0%,#27090d 0,#080808 45%,#050505 100%);color:var(--white);font:16px/1.55 Arial,Helvetica,sans-serif}
+.wrap{max-width:1180px;margin:auto;padding:24px 20px 60px}
+header{text-align:center;padding:42px 12px 28px;border-bottom:3px solid var(--red)}
+.brand{font-size:clamp(2.6rem,7vw,5rem);font-weight:900;letter-spacing:.12em;margin:0}
+.kicker{color:var(--red);font-weight:800;letter-spacing:.12em;margin:8px 0}
+.authority{color:var(--muted);font-size:.9rem}
+h2{text-align:center;text-transform:uppercase;font-size:clamp(1.5rem,4vw,2.2rem);margin:42px 0 8px}
+.sub{text-align:center;color:var(--muted);margin:0 auto 24px;max-width:850px}
+.rule{height:3px;background:linear-gradient(90deg,transparent,var(--red),transparent);margin:18px 0 26px}
+.channel{border:1px solid var(--red);border-radius:18px;background:#16090b;padding:18px;text-align:center;margin:20px 0 24px}
+.channel b{display:block;color:var(--red);letter-spacing:.08em}
+.channels{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.node,.panel,.week{background:linear-gradient(145deg,#171717,#0d0d0d);border:1px solid var(--red);border-radius:18px;padding:22px;box-shadow:0 0 18px #ed1d2b24}
+.node h3{margin:8px 0 10px;text-transform:uppercase;font-size:1.05rem}
+.node p{margin:0;color:#e9e9e9}
+.num{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--red);font-weight:900}
+.connector{text-align:center;color:var(--red);font-size:2rem;line-height:1.5}
+.process{max-width:850px;margin:16px auto}
+.process .node{text-align:center}
+.branch{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.banner{border:1px solid var(--red);border-radius:18px;background:#18090b;padding:24px;margin:26px 0}
+.banner h3{color:var(--red);margin:0 0 12px}
+.banner p{margin:8px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{padding:0;overflow:hidden}
+.panel h3,.week h3{margin:0;padding:16px 20px;background:var(--red);font-size:1.05rem}
+.panel.limit h3{background:#242424;border-bottom:2px solid var(--red)}
+.panel ul{padding:10px 28px 18px 42px}
+li{padding:7px 0 9px} li::marker{color:var(--red)}
+.weeks{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.week{padding:0;overflow:hidden}
+.post{padding:15px 20px;border-bottom:1px solid #ffffff22}
+.post:last-child{border:0}
+.post strong{color:var(--red);font-size:.86rem;text-transform:uppercase}
+.post p{margin:6px 0 0}
+footer{border-top:2px solid var(--red);margin-top:45px;padding:22px;text-align:center;color:var(--muted)}
+@media(max-width:800px){.flow,.branch,.two,.weeks{grid-template-columns:1fr}.wrap{padding:12px}}
+@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+.offer{
+  max-width:980px;margin:24px auto 30px;padding:22px 24px;text-align:center;
+  border:2px solid #ef1d2b;border-radius:20px;
+  background:linear-gradient(110deg,#26090d 0%,#111 55%,#31090d 100%);
+  box-shadow:0 0 24px #ef1d2b55;
+}
+.offer-label{color:#ff5963;font-size:.82rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.offer-prices{display:flex;align-items:baseline;justify-content:center;gap:18px;flex-wrap:wrap;margin:8px 0}
+.offer-old{font-size:clamp(1.3rem,3vw,2rem);color:#bdbdbd;text-decoration:line-through}
+.offer-new{font-size:clamp(2.8rem,7vw,4.5rem);font-weight:900;color:#fff}
+.offer-discount{display:inline-block;background:#ef1d2b;color:#fff;border-radius:999px;padding:7px 16px;font-weight:900}
+.offer-limit{margin:5px 0 0;color:#fff;font-weight:900;letter-spacing:.05em}
+
+</style></head><body><main class="wrap">
+<header><h1 class="brand">GENIUS HORMO</h1><p class="kicker">CONSULTA · DIAGRAMA ESTRATÉGICO</p><p class="authority"><b>Autoridad médica:</b> Altro Health</p></header>
+
+<section class="offer" aria-label="Oferta especial">
+  <div class="offer-label">OFERTA ESPECIAL · MENSAJE DE AUTORIDAD</div>
+  <div class="offer-prices">
+    <span class="offer-old">$150</span>
+    <span class="offer-new">$75</span>
+    <span class="offer-discount">-50% OFF</span>
+  </div>
+  <p class="offer-limit">PRIMERAS 500 CONSULTAS</p>
+</section>
+
+<section><h2>01 · Embudo de conversión</h2><p class="sub">Redes de publicación y recorrido del embudo de conversión.</p>
+<div class="channel"><b>REDES DE PUBLICACIÓN</b><div class="channels"><span>IG RICHARD GUERRERO / GENIUS HORMO</span><span>YT RICHARD GUERRERO</span><span>TIKTOK RICHARD GUERRERO</span></div></div>
+<div class="flow">
+<article class="node"><div class="num">01</div><h3>Redes / Avatares</h3><p>Educación basada en evidencia sobre síntomas inespecíficos, riesgos de automedicación y novedades científicas con límites claros. Opera con tres avatares editoriales (Autoridad, Investigación e Información).</p></article><article class="node"><div class="num">02</div><h3>CEO / Historia</h3><p>Narrativa en primera persona sobre la experiencia personal y el origen de Genius Hormo para humanizar, sin afirmar curas ni resultados universales.</p></article><article class="node"><div class="num">03</div><h3>Landing / Storefront</h3><p>Mensaje simple, precio y CTA único («Agenda tu consulta de orientación clínica con Genius Hormo» / «Agenda tu consulta»), con medición de clics y compras.</p></article></div>
+<div class="connector">↓</div><div class="process"><article class="node"><div class="num">04</div><h3>Product Consult</h3><p>Compra de la consulta → cuestionario médico en el portal (~15 minutos) → revisión de elegibilidad/clínica → agenda y consulta clínica en vivo por videollamada (20 minutos) sobre un área elegida.</p></article></div>
+<div class="connector">↓</div><div class="branch"><article class="node"><div class="num">05</div><h3>Informe / Opciones</h3><p>Hasta tres recomendaciones/opciones de productos y enlaces a páginas de productos del storefront; el informe escrito se entrega en la pestaña Documents hasta 3 días hábiles después. Se indica confirmar atribución en una prueba.</p></article><article class="node"><div class="num">06</div><h3>Decisión independiente</h3><p>El cliente decide. Los medicamentos requieren orden, intake y revisión/evaluación clínica adicionales; no se garantiza receta.</p></article><article class="node"><div class="num">07</div><h3>Genius Hormo 360° (App)</h3><p>App promocional sin costo inicial para hábitos, biométricos y seguimiento de bienestar según funciones verificadas (con duración, alcance y administración de consentimiento de datos de salud pendientes de definir).</p></article></div>
+<div class="banner"><h3>MENSAJE COMUNICACIONAL</h3><p><b>Mensaje comunicacional:</b> Identificación, Educar, autoridad y solución.</p><p><b>Estilo comunicacional:</b> AVATAR / ORGANICO / VISUAL ( IMAGEN)</p><p><b>CTA:</b> Comenta la palabra INFO y te envío más información de como agendar una cita con un profesional de la salud para que te guíe paso a paso a cómo recuperar tu calidad de vida.</p></div></section>
+<section><h2>02 · Lo que ofrece y lo que NO ofrece</h2><div class="two">
+<article class="panel"><h3>Lo que ofrece la consulta</h3><ul><li><b>Cuestionario médico (~15 min):</b> Se llena en el portal tras la compra para elegir el área de enfoque y compartir preguntas para el profesional clínico.</li><li><b>Revisión clínica y de elegibilidad:</b> El equipo clínico revisa las respuestas para confirmar si la consulta es adecuada para el usuario.</li><li><b>Videollamada en vivo de 20 minutos:</b> Conversación uno a uno con un profesional clínico / board-certified clinician centrada en un área a elección:</li><li><b>Control de peso y salud metabólica:</b> (weight management and metabolic health).</li><li><b>Apoyo hormonal:</b> (hormone support).</li><li><b>Longevidad y bienestar general:</b> (longevity and overall wellness).</li><li><b>Tiempo para preguntas:</b> Espacio para resolver dudas del cliente durante la consulta.</li><li><b>Hasta 3 opciones de productos:</b> Recomendaciones personalizadas alineadas con los objetivos, preferencias e historial de salud del cliente (en lugar de buscar en el catálogo por cuenta propia).</li><li><b>Informe escrito posterior:</b> Resumen personalizado con productos recomendados y enlaces, guardado en la pestaña Documents hasta 3 días hábiles después.</li><li><b>Mensaje recordatorio:</b> Se envía alrededor de 2–3 días antes de la cita.</li><li><b>Reembolsos bajo condiciones específicas:</b> Reembolso completo si tras revisar el cuestionario se determina que la consulta no es adecuada para el cliente. Reembolso si se cancela con al menos 24 horas de anticipación.</li></ul></article>
+<article class="panel limit"><h3>Lo que NO ofrece (límites y condiciones)</h3><ul><li><b>No es venta directa de péptidos o medicamentos:</b> La campaña educativa está dirigida a consultas de orientación clínica, no a la venta directa de péptidos o medicamentos.</li><li><b>No equivale a diagnóstico integral:</b> El cuestionario y la revisión de elegibilidad no equivalen a un diagnóstico integral.</li><li><b>No incluye análisis de laboratorio:</b> No equivale a análisis de laboratorio.</li><li><b>No se enfoca en múltiples áreas a la vez:</b> La videoconsulta de 20 minutos es sobre un área (peso/metabolismo, longevidad/bienestar o apoyo hormonal).</li><li><b>No fija dosis ni garantiza recetas:</b> La recomendación de productos no fija dosis ni garantiza recetas; los medicamentos requieren orden, intake y revisión/evaluación clínica adicionales.</li><li><b>No es reembolsable dentro de las 24 horas:</b> Si se cancela dentro de las 24 horas previas, no hay reembolso.</li><li><b>No promete curas, resultados universales ni “regeneración”:</b> Se indica evitar prometer “regeneración hormonal o celular” y no afirmar curas ni resultados universales.</li><li><b>No incluye garantía de atribución o ruta al storefront sin prueba previa:</b> Los enlaces a páginas de productos requieren confirmar la atribución en una prueba y la ruta al storefront.</li></ul></article>
+</div></section>
+<section><h2>03 · Distribución de contenido semanal</h2><p class="sub">3 veces por semana / Lunes - miércoles - Viernes</p><div class="weeks"><article class="week"><h3>SEMANA 1</h3><div class="post"><strong>Experiencia personal (Orgánico - CEO)</strong><p>Cuando sentía fatiga y cambios de energía: así empecé a buscar claridad sobre mi bienestar</p></div><div class="post"><strong>Avatar (Autoridad, Investigación e Información)</strong><p>Fatiga, sueño o cambios de ánimo: cómo distinguir información verificable frente a suposiciones (Avatar: Autoridad)</p></div><div class="post"><strong>Experiencia personal (Orgánico - CEO)</strong><p>Dormir distinto, notar cambios en el peso o el ánimo: lo que viví al intentar entender mis señales.</p></div></article><article class="week"><h3>SEMANA 2</h3><div class="post"><strong>Avatar (Autoridad, Investigación e Información)</strong><p>Señales de energía, peso o ánimo: qué revisa un profesional clínico en una orientación (Avatar: Autoridad)</p></div><div class="post"><strong>Experiencia personal (Orgánico - CEO)</strong><p>Mi experiencia frente a las señales de energía y ánimo antes de crear Genius Hormo</p></div><div class="post"><strong>Avatar (Autoridad, Investigación e Información)</strong><p>Cambios de energía y bienestar: qué dice la evidencia y qué sigue en estudio (Avatar: Investigación)</p></div></article><article class="week"><h3>SEMANA 3</h3><div class="post"><strong>Experiencia personal (Orgánico - CEO)</strong><p>Por qué decidí ordenar lo que sentía con información y orientación clínica en vez de suponer</p></div><div class="post"><strong>Avatar (Autoridad, Investigación e Información)</strong><p>Sueño, peso y ánimo: por qué conviene separar ciencia sólida de novedades sin probar (Avatar: Investigación)</p></div><div class="post"><strong>Experiencia personal (Orgánico - CEO)</strong><p>Lo que aprendí al observar mi propio sueño, energía y bienestar día a día</p></div></article><article class="week"><h3>SEMANA 4</h3><div class="post"><strong>Avatar (Autoridad, Investigación e Información)</strong><p>Tienes fatiga o cambios de energía: así funciona el cuestionario y la consulta de 20 min (Avatar: Información)</p></div><div class="post"><strong>Experiencia personal (Orgánico - CEO)</strong><p>De la incertidumbre por mis señales cotidianas a construir herramientas para orientarse mejor</p></div><div class="post"><strong>Avatar (Autoridad, Investigación e Información)</strong><p>Del malestar diario a tu informe en Documento: paso a paso de la orientación clínica (Avatar: Información)</p></div></article></div></section>
+<footer><b>GENIUS HORMO</b><br>Consulta · Diagrama estratégico</footer>
+</main></body></html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="Centro de estrategia y diagramas de Genius Hormo.">
+  <title>GENIUS HORMO | Centro estratégico</title>
+  <style>
+    :root {
+      --bg: #08090b;
+      --panel: #111418;
+      --panel2: #171a1f;
+      --red: #e32636;
+      --red2: #ff5360;
+      --white: #f5f5f6;
+      --muted: #b9bdc4;
+      --silver: #d8dce2;
+      --line: #71313a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--white);
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(120, 15, 31, .36) 0%, transparent 42%),
+        linear-gradient(180deg, #0b0c0f 0%, #070809 100%);
+      font: 16px/1.6 Arial, Helvetica, sans-serif;
+    }
+    a { color: inherit; }
+    .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      padding: 76px 0 46px;
+      text-align: center;
+      border-bottom: 3px solid var(--red);
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--red2);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+    .brand {
+      margin: 0;
+      font-size: clamp(2.7rem, 8vw, 5.6rem);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: .12em;
+    }
+    .brand span { color: var(--red2); }
+    .subtitle {
+      max-width: 680px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+    .intro { padding: 48px 0 22px; text-align: center; }
+    .intro h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.55rem, 4vw, 2.15rem);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .intro p { max-width: 720px; margin: 0 auto; color: var(--muted); }
+    .accent-line {
+      width: 110px; height: 3px; margin: 22px auto 0;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      padding: 28px 0 70px;
+    }
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 340px;
+      overflow: hidden;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: linear-gradient(145deg, rgba(27, 30, 36, .98), rgba(12, 14, 17, .98));
+      box-shadow: 0 12px 38px rgba(0,0,0,.25), 0 0 24px rgba(227,38,54,.08);
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--red2);
+      box-shadow: 0 16px 42px rgba(0,0,0,.34), 0 0 28px rgba(227,38,54,.16);
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 190px; height: 190px;
+      right: -75px; top: -85px;
+      border: 1px solid rgba(255,83,96,.18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 18px rgba(255,83,96,.025), 0 0 0 38px rgba(255,83,96,.02);
+      pointer-events: none;
+    }
+    .number {
+      display: grid; place-items: center;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--red);
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 0 20px rgba(227,38,54,.25);
+    }
+    .tag {
+      margin: 24px 0 8px;
+      color: var(--red2);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: clamp(1.45rem, 3vw, 1.9rem);
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .card p { margin: 14px 0 24px; color: var(--muted); }
+    .details {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-top: auto; padding-bottom: 24px;
+    }
+    .pill {
+      padding: 6px 11px;
+      border: 1px solid #454a52;
+      border-radius: 999px;
+      color: var(--silver);
+      font-size: .78rem;
+    }
+    .open-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      min-width: 190px;
+      padding: 13px 19px;
+      border: 1px solid var(--red);
+      border-radius: 9px;
+      background: linear-gradient(100deg, #b81729, #e32636);
+      color: white;
+      font-weight: 800;
+      text-decoration: none;
+      transition: filter .2s ease, transform .2s ease;
+    }
+    .open-link:hover { filter: brightness(1.13); transform: translateY(-1px); }
+    .arrow { font-size: 1.15rem; line-height: 1; }
+    .note {
+      margin: 0 0 58px;
+      padding: 19px 22px;
+      border: 1px solid #454a52;
+      border-left: 4px solid var(--red);
+      border-radius: 14px;
+      background: rgba(17,20,24,.8);
+      color: var(--muted);
+      text-align: center;
+    }
+    footer {
+      padding: 24px 0 32px;
+      border-top: 2px solid var(--red);
+      color: var(--muted);
+      text-align: center;
+      font-size: .88rem;
+    }
+    footer strong { color: var(--white); letter-spacing: .12em; }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 28px, 560px); }
+      header { padding: 56px 0 34px; }
+      .cards { grid-template-columns: 1fr; padding-top: 20px; }
+      .card { min-height: 315px; padding: 25px; }
+      .intro { padding-top: 38px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <p class="eyebrow">Centro de estrategia · Ecosistema digital</p>
+      <h1 class="brand">GENIUS <span>HORMO</span></h1>
+      <p class="subtitle">Un espacio central para consultar los diagramas estratégicos y las líneas de trabajo de Genius Hormo.</p>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="intro">
+      <h2>Panel principal</h2>
+      <p>Selecciona el diagrama que deseas revisar. Cada apartado abre su documento estratégico completo.</p>
+      <div class="accent-line"></div>
+    </section>
+
+    <section class="cards" aria-label="Diagramas estratégicos">
+      <article class="card">
+        <div class="number">01</div>
+        <p class="tag">Estrategia de consulta</p>
+        <p>Diagrama estratégico del recorrido de consulta, embudo de conversión, oferta, alcance del servicio y distribución de contenido.</p>
+        <div class="details">
+          <span class="pill">Embudo de conversión</span>
+          <span class="pill">Consulta</span>
+          <span class="pill">Contenido semanal</span>
+        </div>
+        <a class="open-link" href="diagramas/consulta.html">Consulta · Genius Hormo <span class="arrow">→</span></a>
+      </article>
+
+      <article class="card">
+        <div class="number">02</div>
+        <p class="tag">Dispositivos · Tecnología</p>
+        <p>Diagrama estratégico de dispositivos, funciones, métricas, embudo de conversión y planificación de publicaciones.</p>
+        <div class="details">
+          <span class="pill">WHOOP</span>
+          <span class="pill">MUSE</span>
+          <span class="pill">Distribución semanal</span>
+        </div>
+        <a class="open-link" href="diagramas/whoop-muse.html">WHOOP / MUSE <span class="arrow">→</span></a>
+      </article>
+    </section>
+
+    <div class="note">
+      <strong style="color:var(--silver)">GENIUS HORMO</strong> · Centro de consulta de diagramas estratégicos.
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell"><strong>GENIUS HORMO</strong><br>Centro estratégico digital</div>
+  </footer>
+</body>
+</html>

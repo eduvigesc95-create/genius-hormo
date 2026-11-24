@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090607">
+<title>Genius Hormo — Tratamientos Hormonales</title>
+<style>
+:root{
+  --bg:#090607;--panel:#151012;--panel2:#1d1417;
+  --red:#c71932;--red2:#ff4058;--red3:#7e1024;
+  --white:#f7f2f3;--muted:#c5b8bb;--line:#61202d;
+  --warm:#eadde0;--glow:rgba(199,25,50,.16);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;color:var(--white);font:16px/1.6 Arial,Helvetica,sans-serif;
+  background:radial-gradient(ellipse at 50% 0%,#3b0c18 0%,#12090c 38%,#080607 100%);
+}
+.wrap{max-width:1200px;margin:auto;padding:24px 20px 65px}
+header{text-align:center;padding:44px 14px 30px;border-bottom:3px solid var(--red)}
+.brand{font-size:clamp(2.5rem,7vw,5rem);font-weight:900;letter-spacing:.12em;margin:0;line-height:1.08}
+.kicker{color:var(--red2);font-weight:800;letter-spacing:.15em;margin:10px 0;text-transform:uppercase}
+.authority{color:var(--muted);margin:5px 0}
+h2{text-align:center;text-transform:uppercase;font-size:clamp(1.5rem,4vw,2.25rem);margin:44px 0 8px;letter-spacing:.035em}
+.sub{text-align:center;color:var(--muted);margin:0 auto 25px;max-width:920px}
+.rule{height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);margin:22px 0}
+.channel{border:1px solid var(--red);border-radius:18px;background:linear-gradient(120deg,#2a0b13,#171014);padding:18px;text-align:center;margin:20px 0 24px;box-shadow:0 0 22px var(--glow)}
+.channel b{display:block;color:var(--red2);letter-spacing:.1em;margin-bottom:8px}
+.channels{display:flex;justify-content:center;gap:12px 24px;flex-wrap:wrap;color:var(--warm)}
+.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.node,.week,.program,.reason,.format{
+  background:linear-gradient(145deg,#21171a,#100c0e);
+  border:1px solid var(--line);border-radius:18px;padding:22px;
+  box-shadow:0 0 18px var(--glow)
+}
+.node h3{margin:9px 0 10px;text-transform:uppercase;font-size:1.05rem;color:var(--warm)}
+.node p{margin:0;color:#eee5e7}
+.num{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;font-weight:900;box-shadow:0 0 16px var(--glow)}
+.connector{text-align:center;color:var(--red2);font-size:2.2rem;line-height:1.5}
+.process{max-width:850px;margin:16px auto}
+.process .node{text-align:center}
+.banner{border:1px solid var(--red);border-left:5px solid var(--red2);border-radius:18px;background:linear-gradient(110deg,#300b16,#171014);padding:24px;margin:27px 0}
+.banner h3,.program h4,.reason h3,.format h3{color:var(--red2)}
+.banner h3{margin:0 0 12px}.banner p{margin:8px 0}
+.programs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.program{padding:20px}
+.program h3{margin:0 0 10px;color:var(--warm);text-transform:uppercase;font-size:1rem}
+.program p{margin:0;color:#e9dfe2}
+.program .accent{width:42px;height:4px;background:var(--red);border-radius:5px;margin-bottom:14px}
+.weeks{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.week{padding:0;overflow:hidden}
+.week h3{margin:0;padding:16px 20px;background:linear-gradient(90deg,#790f24,#c71932);font-size:1.05rem;color:#fff}
+.week-intro{padding:12px 20px;background:#1a1114;color:var(--muted);font-weight:700;border-bottom:1px solid #ffffff18}
+.post{padding:15px 20px;border-bottom:1px solid #ffffff20}
+.post:last-child{border:0}
+.post strong{color:#ff6578;font-size:.86rem;text-transform:uppercase;letter-spacing:.04em}
+.post p{margin:6px 0 0;color:#f0e9eb}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.reason h3{margin:0 0 12px;font-size:1.1rem}
+.reason p{color:#e9dfe2}
+.reason ol{padding-left:22px;margin:0}
+.reason li{padding:8px 0 12px;color:#e9dfe2}
+li::marker{color:var(--red2)}
+.formats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+.format{padding:22px}
+.format h3{margin:0 0 10px}
+.format p{margin:0;color:#e9dfe2}
+.narrative{border:1px solid #7d2737;border-radius:18px;background:#170d10;padding:22px;margin-top:18px;color:#e9dfe2}
+.narrative p{margin:8px 0}
+table{width:100%;border-collapse:collapse;margin:18px 0;background:#130d0f;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+th,td{padding:13px 15px;text-align:left;border-bottom:1px solid #ffffff20}
+th{background:#651022;color:#fff;text-transform:uppercase;font-size:.82rem;letter-spacing:.05em}
+td{color:#eee5e7}tr:last-child td{border-bottom:0}
+footer{border-top:2px solid var(--red);margin-top:46px;padding:22px;text-align:center;color:var(--muted)}
+footer b{color:var(--white);letter-spacing:.12em}
+@media(max-width:850px){.flow,.programs,.weeks,.reasons,.formats{grid-template-columns:1fr}.wrap{padding:12px}}
+@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header>
+  <h1 class="brand">GENIUS HORMO</h1>
+  <p class="kicker">TRATAMIENTOS HORMONALES · DIAGRAMA ESTRATÉGICO</p>
+  <p class="authority"><b>Autoridad médica:</b> Altro Health</p>
+  <p class="authority">pagina web: Genius Hormo | Recupera tu energía, tu salud y tu mejor versión</p>
+</header>
+
+<section>
+  <h2>01 · Embudo de conversión</h2>
+  <p class="sub">Redes de publicación y recorrido del embudo de conversión.</p>
+  <div class="channel">
+    <b>REDES DE PUBLICACIÓN</b>
+    <div class="channels">
+      <span>IG RICHARD GUERRERO ( REELS DE PRUEBA ) / GENIUS HORMO</span>
+      <span>YT RICHARD GUERRERO</span>
+      <span>TIKTOK RICHARD GUERRERO</span>
+    </div>
+  </div>
+  <div class="process">
+    <article class="node">
+      <span class="num">01</span>
+      <h3>Embudo de conversión</h3>
+      <p>REDES - COMENTARIOS - DM - PAGINA WEB - ALTRO</p>
+    </article>
+  </div>
+  <div class="connector">↓</div>
+  <div class="banner">
+    <h3>CTA</h3>
+    <p>Comenta la palabra INFO y te envío más información de cómo agendar una cita con un profesional de la salud para que te guíe paso a paso a cómo recuperar tu calidad de vida.</p>
+  </div>
+  <div class="flow">
+    <article class="node">
+      <span class="num">02</span>
+      <h3>Programa y tratamiento</h3>
+      <p>Un profesional evalúa tu caso y define el programa que te corresponde.</p>
+    </article>
+    <article class="node">
+      <span class="num">04</span>
+      <h3>Comunicación</h3>
+      <p>Mensaje comunicacional: Educar, autoridad y solución.</p>
+      <p><b>Estilo comunicacional:</b> AVATAR / MOTION GRAPHICS</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>02 · Tratamientos y programas</h2>
+  <p class="sub">Programas disponibles</p>
+  <div class="programs">
+    <article class="program"><div class="accent"></div><h3>Optimización hormonal</h3></article>
+    <article class="program"><div class="accent"></div><h3>Pérdida de peso</h3></article>
+    <article class="program"><div class="accent"></div><h3>Energía y rendimiento</h3></article>
+    <article class="program"><div class="accent"></div><h3>Longevidad y salud celular</h3></article>
+    <article class="program"><div class="accent"></div><h3>Bienestar mental y descanso</h3></article>
+    <article class="program"><div class="accent"></div><h3>Skin &amp; Beauty</h3></article>
+  </div>
+</section>
+
+<section>
+  <h2>03 · Distribución de contenido semanal</h2>
+  <p class="sub">6 video por semana, Martes, Miercoles, jueves, viernes, sábado y domingo</p>
+
+  <div class="weeks">
+    <article class="week">
+      <h3>SEMANA 1: Peso, metabolismo y control del apetito</h3>
+      <div class="week-intro">AVATAR · 3 VIDEOS</div>
+      <div class="post"><strong>1 · AVATAR</strong><p>Tirzepatide + B12: ¿Por qué controlar el apetito puede cambiar tu relación con la comida?</p></div>
+      <div class="post"><strong>2 · AVATAR</strong><p>Tirzepatide + B12: ¿Qué debes saber antes de comenzar un tratamiento para perder peso?</p></div>
+      <div class="post"><strong>3 · AVATAR</strong><p>Semax + Selank: ¿Qué relación existe entre tu cerebro, tus hábitos y el control del peso?</p></div>
+      <div class="week-intro">MOTION GRAPHICS · 3 VIDEOS</div>
+      <div class="post"><strong>4 · MOTION GRAPHICS</strong><p>CJC-1295 + Ipamorelin: ¿Qué son los péptidos y por qué están ganando atención en el mundo de la salud?</p></div>
+      <div class="post"><strong>5 · MOTION GRAPHICS</strong><p>Tirzepatide: ¿Qué papel desempeñan las señales hormonales relacionadas con el apetito?</p></div>
+      <div class="post"><strong>6 · MOTION GRAPHICS</strong><p>Metabolismo: Tres factores que debes conocer antes de iniciar un programa de optimización corporal.</p></div>
+    </article>
+
+    <article class="week">
+      <h3>SEMANA 2: Testosterona y longevidad</h3>
+      <div class="week-intro">AVATAR · 3 VIDEOS</div>
+      <div class="post"><strong>7 · AVATAR</strong><p>Men's Testosterone Therapy: ¿Cansancio, baja libido y falta de energía? ¿Cuándo evaluar tu testosterona?</p></div>
+      <div class="post"><strong>8 · AVATAR</strong><p>Men's Hormonal Health Panel: ¿Qué información puede revelar una evaluación de tu salud hormonal?</p></div>
+      <div class="post"><strong>9 · AVATAR</strong><p>NAD+: ¿Qué es el NAD+ y por qué se relaciona con la salud celular?</p></div>
+      <div class="week-intro">MOTION GRAPHICS · 3 VIDEOS</div>
+      <div class="post"><strong>10 · MOTION GRAPHICS</strong><p>MOTS-C: ¿Qué es este péptido y qué relación tiene con el metabolismo celular?</p></div>
+      <div class="post"><strong>11 · MOTION GRAPHICS</strong><p>SS-31: ¿Por qué las mitocondrias son importantes para entender la energía celular?</p></div>
+      <div class="post"><strong>12 · MOTION GRAPHICS</strong><p>Longevidad: Envejecer no es solamente cumplir años: conoce el concepto de salud celular.</p></div>
+    </article>
+
+    <article class="week">
+      <h3>Semana 3 — Recuperación, rendimiento y bienestar mental<br>Recovery &amp; Performance / Brain &amp; Wellness</h3>
+      <div class="week-intro">AVATAR · 3 VIDEOS</div>
+      <div class="post"><strong>13 · AVATAR</strong><p>BPC-157: ¿Por qué este péptido despierta interés en el mundo de la recuperación?</p></div>
+      <div class="post"><strong>14 · AVATAR</strong><p>Wolverine: ¿Qué es el llamado Wolverine Stack y qué componentes debes conocer?</p></div>
+      <div class="post"><strong>15 · AVATAR</strong><p>Semax + Selank: Estrés, concentración y fatiga mental: ¿qué debes entender sobre estos péptidos?</p></div>
+      <div class="week-intro">MOTION GRAPHICS · 3 VIDEOS</div>
+      <div class="post"><strong>16 · MOTION GRAPHICS</strong><p>CJC-1295 + Ipamorelin: ¿Qué relación existe entre la hormona de crecimiento y estos péptidos?</p></div>
+      <div class="post"><strong>17 · MOTION GRAPHICS</strong><p>BPC-157: ¿Qué es un péptido y cómo se estudia su posible papel en los procesos de reparación?</p></div>
+      <div class="post"><strong>18 · MOTION GRAPHICS</strong><p>Brain &amp; Wellness: ¿Cómo se relacionan el estrés, el sueño y el rendimiento cognitivo?</p></div>
+    </article>
+
+    <article class="week">
+      <h3>Semana 4 — Piel, belleza y optimización integral<br>Skin &amp; Beauty / Contenido transversal</h3>
+      <div class="week-intro">AVATAR · 3 VIDEOS</div>
+      <div class="post"><strong>19 · AVATAR</strong><p>GHK-Cu: ¿Qué es el péptido de cobre y por qué genera interés en el cuidado de la piel?</p></div>
+      <div class="post"><strong>20 · AVATAR</strong><p>Glow Stack: ¿Qué debes conocer sobre los componentes de un programa enfocado en Skin &amp; Beauty?</p></div>
+      <div class="post"><strong>21 · AVATAR</strong><p>Optimización integral: ¿Por qué no deberías evaluar tu salud únicamente por cómo te ves físicamente?</p></div>
+      <div class="week-intro">MOTION GRAPHICS · 3 VIDEOS</div>
+      <div class="post"><strong>22 · MOTION GRAPHICS</strong><p>GHK-Cu: ¿Qué es este componente y por qué está ganando popularidad en el cuidado de la piel?</p></div>
+      <div class="post"><strong>23 · MOTION GRAPHICS</strong><p>NAD+ y longevidad: ¿Cómo funciona la producción de energía dentro de nuestras células?</p></div>
+      <div class="post"><strong>24 · MOTION GRAPHICS</strong><p>Genius Hormo: De la evaluación inicial al seguimiento: así se conecta tu tratamiento con tus datos de salud.</p></div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>04 · Justificación de la programación</h2>
+  <p class="sub">Criterios de frecuencia, formatos y organización temática.</p>
+
+  <article class="reason">
+    <h3>1. La frecuencia de publicación permite mantener presencia y generar múltiples oportunidades de contacto</h3>
+    <p>La programación contempla publicaciones de martes a domingo, es decir, seis oportunidades semanales para conectar con la audiencia.</p>
+    <p>Esto permite:</p>
+    <ol>
+      <li>Mantener a Genius Hormo presente en la conversación digital.</li>
+      <li>Generar múltiples puntos de contacto con potenciales clientes.</li>
+      <li>Dar continuidad a los mensajes y no depender de una publicación aislada.</li>
+      <li>Identificar qué temas generan mayor interés y cuáles despiertan más consultas.</li>
+    </ol>
+    <p>La repetición estratégica es importante: una persona puede descubrir Genius Hormo con un video, interesarse con otro y finalmente decidir solicitar información después de varias interacciones.</p>
+  </article>
+
+  <h2>2. La combinación Avatar + Motion Graphics cumple dos funciones diferentes</h2>
+  <p class="sub">Esta es una de las decisiones más importantes de la programación.</p>
+  <div class="formats">
+    <article class="format">
+      <h3>AVATAR — Confianza y conexión</h3>
+      <p>El presentador humaniza la marca. Permite explicar situaciones cotidianas, hablar directamente al usuario, generar empatía y transmitir autoridad comunicacional.</p>
+      <p>Su función es conseguir que la persona se identifique con el problema y quiera escuchar la explicación.</p>
+    </article>
+    <article class="format">
+      <h3>MOTION GRAPHICS — Educación y comprensión</h3>
+      <p>Permite representar procesos biológicos, explicar conceptos hormonales y mostrar información que sería difícil comprender únicamente mediante una persona hablando frente a una cámara.</p>
+      <p>Su función es transformar conceptos complejos en información visual, sencilla y memorable.</p>
+    </article>
+  </div>
+  <div class="narrative">
+    <p>La distribución de tres videos de cada formato evita que la comunicación sea monótona y permite trabajar simultáneamente la conexión emocional y la comprensión educativa.</p>
+  </div>
+
+  <h2>3. La programación por semanas permite construir una narrativa</h2>
+  <p class="sub">Los 24 títulos están organizados en cuatro grandes bloques temáticos:</p>
+  <table>
+    <thead><tr><th>Semana</th><th>Enfoque</th><th>Objetivo comunicacional</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Peso y metabolismo</td><td>Identificación de problemas cotidianos</td></tr>
+      <tr><td>2</td><td>Testosterona y longevidad</td><td>Conciencia sobre salud hormonal y celular</td></tr>
+      <tr><td>3</td><td>Recuperación y bienestar mental</td><td>Educación sobre nuevas categorías</td></tr>
+      <tr><td>4</td><td>Piel y optimización integral</td><td>Ampliar el interés hacia otros programas</td></tr>
+    </tbody>
+  </table>
+  <div class="narrative">
+    <p>Esta organización permite que Genius Hormo no parezca una página que simplemente promociona medicamentos.</p>
+    <p>En cambio, se presenta como una marca que aborda diferentes necesidades de salud y bienestar, explica sus conceptos y orienta al usuario hacia una evaluación profesional.</p>
+    <p>Además, cada semana tiene un territorio temático que facilita la planificación de grabaciones, edición, diseño y producción.</p>
+  </div>
+</section>
+
+<footer><b>GENIUS HORMO</b><br>Tratamientos Hormonales · Diagrama estratégico</footer>
+</main>
+</body>
+</html>

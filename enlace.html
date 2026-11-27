@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a09">
+  <meta name="description" content="Accede a todos los enlaces de Richard Guerrero y Genius Hormo: consulta, tratamientos, recursos y redes sociales.">
+  <title>Genius Hormo | Todos mis enlaces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#090a09;--panel:#111310;--line:rgba(255,255,255,.12);--muted:#a4a79f;--white:#f7f8f3;--lime:#d8ff32;--lime-ink:#171a0d}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-width:320px;background:radial-gradient(ellipse at 76% 8%,rgba(203,235,69,.09),transparent 31rem),var(--bg);color:var(--white);font-family:"DM Sans",Arial,sans-serif;font-size:16px;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .shell{width:min(1080px,calc(100% - 40px));margin:0 auto;padding:26px 0 34px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 0 22px;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:.01em}
+    .brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;background:#000}
+    .brand span{font-size:15px;line-height:1.1}.brand small{display:block;margin-top:4px;font:600 10px "DM Sans",sans-serif;letter-spacing:.17em;color:#aeb0a9;text-transform:uppercase}
+    .availability{display:flex;align-items:center;gap:9px;font-size:12px;color:#c0c2bc;letter-spacing:.08em;text-transform:uppercase}
+    .availability i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 14px rgba(216,255,50,.65)}
+    .hero{position:relative;display:grid;grid-template-columns:1fr .88fr;align-items:center;gap:clamp(30px,6vw,76px);min-height:435px;padding:36px 0 30px;overflow:hidden}
+    .hero-copy{position:relative;z-index:2;max-width:580px}
+    .eyebrow{display:flex;align-items:center;gap:10px;color:var(--lime);font-size:12px;font-weight:700;letter-spacing:.19em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:22px;height:1px;background:var(--lime)}
+    h1,h2,p{margin-top:0}
+    h1{margin:18px 0 16px;font:700 clamp(38px,5.2vw,64px)/1.02 Manrope,sans-serif;letter-spacing:-.055em}
+    h1 span{color:var(--lime)}
+    .intro{max-width:430px;margin-bottom:24px;color:#c3c5bf;font-size:17px}
+    .cta{display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(100%,440px);min-height:92px;padding:17px 19px;border:1px solid rgba(255,126,145,.8);border-radius:16px;background:#ed2948;color:#fff;box-shadow:0 14px 45px rgba(237,41,72,.24);transition:transform .2s,box-shadow .2s}
+    .cta:hover,.link-card:hover{transform:translateY(-3px)}
+    .cta:hover{box-shadow:0 18px 55px rgba(237,41,72,.36)}
+    .cta-copy{display:grid;gap:4px}.cta-label{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.cta-title{font:800 17px/1.2 Manrope,sans-serif}
+    .price{display:flex;align-items:center;gap:8px;white-space:nowrap}.price strong{font:800 30px/1 Manrope,sans-serif;letter-spacing:-.06em}.price del{display:block;color:rgba(255,255,255,.78);font-size:12px}.discount{display:block;margin-top:4px;font-size:10px;font-weight:800;letter-spacing:.08em}
+    .portrait{position:relative;align-self:stretch;min-height:375px;isolation:isolate}
+    .portrait:before{content:"";position:absolute;z-index:-1;inset:9% 3% 0 8%;border-radius:48% 48% 20px 20px;background:linear-gradient(150deg,rgba(216,255,50,.19),rgba(255,255,255,.02) 48%,transparent 75%);filter:blur(1px)}
+    .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 22px 52px rgba(0,0,0,.68));mask-image:linear-gradient(to bottom,#000 84%,transparent 100%)}
+    .portrait-note{position:absolute;right:0;bottom:28px;display:flex;align-items:center;gap:10px;padding:10px 13px;border:1px solid var(--line);border-radius:12px;background:rgba(10,11,9,.74);backdrop-filter:blur(12px);font-size:12px;color:#d6d8d2}
+    .portrait-note img{position:static;width:25px;height:25px;object-fit:cover;filter:none;mask-image:none;border-radius:50%}
+    .links{padding-top:23px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px}
+    .section-head h2{margin:0;font:700 20px/1.2 Manrope,sans-serif;letter-spacing:-.03em}
+    .section-head p{margin:0;color:var(--muted);font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .link-card{--accent:var(--lime);position:relative;display:flex;align-items:center;gap:15px;min-height:91px;padding:17px 18px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(120deg,rgba(255,255,255,.045),rgba(255,255,255,.018));transition:transform .2s,border-color .2s,background .2s}
+    .link-card:hover{border-color:rgba(216,255,50,.5);background:rgba(216,255,50,.045)}
+    .icon{display:grid;place-items:center;flex:0 0 44px;height:44px;border:1px solid rgba(216,255,50,.23);border-radius:12px;background:rgba(216,255,50,.07);color:var(--accent)}
+    .icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .card-copy{min-width:0}.card-title{display:block;font-weight:700;font-size:15px;line-height:1.3}.card-note{display:block;margin-top:4px;color:var(--muted);font-size:13px;line-height:1.35}
+    .external{margin-left:auto;color:#74776f;font-size:18px;transition:color .2s}.link-card:hover .external{color:var(--lime)}
+    .social{--accent:#f6f7f2}.social .icon{border-color:var(--line);background:rgba(255,255,255,.04)}
+    .footer{display:flex;justify-content:space-between;gap:18px;margin-top:26px;padding-top:17px;border-top:1px solid var(--line);color:#83867e;font-size:12px}
+    .footer b{color:#c7cac2;font-weight:600}
+    a:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
+    @media(max-width:720px){.shell{width:min(520px,calc(100% - 30px));padding-top:18px}.topbar{padding-bottom:16px}.availability{font-size:10px}.hero{grid-template-columns:1fr;gap:4px;min-height:0;padding:31px 0 8px}.hero-copy{max-width:none}.intro{max-width:440px}.portrait{position:absolute;top:28px;right:-48px;width:48%;height:320px;min-height:0;opacity:.26;z-index:0;pointer-events:none}.hero-copy{max-width:100%}.hero:after{content:"";position:absolute;inset:0 23% 0 0;z-index:1;pointer-events:none;background:linear-gradient(90deg,var(--bg) 0%,rgba(9,10,9,.93) 48%,transparent 100%)}.hero-copy{z-index:2}.cta{width:min(100%,440px)}.links{padding-top:21px}.grid{grid-template-columns:1fr;gap:9px}.link-card{min-height:78px;padding:13px 14px}.section-head{align-items:start;flex-direction:column;gap:5px}.portrait-note{display:none}}
+    @media(max-width:380px){.brand span{font-size:13px}.availability{letter-spacing:.04em}.price strong{font-size:26px}.cta{padding:15px}.cta-title{font-size:15px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="https://geniushormo.com" target="_blank" rel="noopener noreferrer" aria-label="Genius Hormo, abrir sitio principal">
+        <img src="assets enlace/genius-hormo-logo.jpeg" alt="Logo Genius Hormo">
+        <span>GENIUS HORMO<small>Richard Guerrero</small></span>
+      </a>
+      <div class="availability"><i aria-hidden="true"></i>Conecta con Genius Hormo</div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">Bienvenido</div>
+        <h1 id="hero-title">Todo lo que buscas,<br><span>en un solo lugar.</span></h1>
+        <p class="intro">Consulta, recursos y canales oficiales de Richard Guerrero y Genius Hormo.</p>
+        <a class="cta" href="https://geniushormo.com/consulta" target="_blank" rel="noopener noreferrer">
+          <span class="cta-copy"><span class="cta-label">Agenda tu consulta ahora</span><span class="cta-title">Aprovecha la oferta</span></span>
+          <span class="price"><span><strong>$75</strong><del>Antes $150</del><span class="discount">50% OFF</span></span></span>
+        </a>
+      </div>
+      <div class="portrait" aria-label="Retrato de Richard Guerrero">
+        <img src="assets enlace/richard-guerrero.jpg" alt="Richard Guerrero con camiseta negra y gafas amarillas" fetchpriority="high">
+        <div class="portrait-note"><img src="assets enlace/genius-hormo-logo.jpeg" alt=""><span>Genius Hormo<br><b>Enlaces oficiales</b></span></div>
+      </div>
+    </section>
+
+    <section class="links" aria-labelledby="links-title">
+      <div class="section-head"><h2 id="links-title">Explora mis enlaces</h2><p>Elige el destino que quieres visitar</p></div>
+      <div class="grid">
+        <a class="link-card" href="https://geniushormo.com" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5h16v13H4z"/><path d="M8 9h8M8 12h5M8 15h8"/><path d="M7 3v2.5M17 3v2.5"/></svg></span>
+          <span class="card-copy"><span class="card-title">Tratamientos y app Genius Hormo</span><span class="card-note">Conoce más sobre Genius Hormo</span></span><span class="external" aria-hidden="true">↗</span>
+        </a>
+        <a class="link-card" href="https://www.whoop.com/us/en/whoop-trials/" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 13h4l2.2-6 4.1 11 2.2-6H21"/><path d="M12 3a9 9 0 1 0 9 9"/></svg></span>
+          <span class="card-copy"><span class="card-title">Adquiere tu WHOOP</span><span class="card-note">Obtén un mes gratis</span></span><span class="external" aria-hidden="true">↗</span>
+        </a>
+        <a class="link-card" href="https://choosemuse.com/pages/muse-2-offers" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M4 14v2a2 2 0 0 0 2 2h1v-5H6a2 2 0 0 0-2 1ZM20 14v2a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 1Z"/><path d="M9 20h6"/></svg></span>
+          <span class="card-copy"><span class="card-title">Adquiere tu diadema Muse</span><span class="card-note">Disfruta de un 20% de descuento</span></span><span class="external" aria-hidden="true">↗</span>
+        </a>
+        <a class="link-card social" href="https://www.youtube.com/@richardguerrerogenius" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 8.2a2.5 2.5 0 0 0-1.8-1.8C17.6 6 12 6 12 6s-5.6 0-7.2.4A2.5 2.5 0 0 0 3 8.2 26 26 0 0 0 2.6 12a26 26 0 0 0 .4 3.8 2.5 2.5 0 0 0 1.8 1.8C6.4 18 12 18 12 18s5.6 0 7.2-.4a2.5 2.5 0 0 0 1.8-1.8 26 26 0 0 0 .4-3.8 26 26 0 0 0-.4-3.8Z"/><path d="m10 15 5-3-5-3z"/></svg></span>
+          <span class="card-copy"><span class="card-title">Canal de YouTube</span><span class="card-note">Videos de Richard Guerrero</span></span><span class="external" aria-hidden="true">↗</span>
+        </a>
+        <a class="link-card social" href="https://www.instagram.com/geniushormo/" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.7 6.5h.01"/></svg></span>
+          <span class="card-copy"><span class="card-title">Instagram Genius Hormo</span><span class="card-note">Síguenos en Instagram</span></span><span class="external" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+    <footer class="footer"><span>© Genius Hormo · Richard Guerrero</span><span><b>Conecta</b> con mis canales oficiales</span></footer>
+  </main>
+</body>
+</html>
